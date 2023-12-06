@@ -22,13 +22,15 @@ const UserSchema = new Schema({
         type:String,
         default:'Male',
         enum:['Male','Female'],
+    },
+    profilepic:{
+        type:String,
     }
 },{
     timestamps:true,
 })
 
 const userModel = mongoose.models.User || model('User',UserSchema);
-
 export default userModel;
 
     
